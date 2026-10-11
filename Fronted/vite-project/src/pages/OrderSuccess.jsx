@@ -15,14 +15,14 @@ function OrderSuccess() {
     if (image.startsWith("http")) return image;
 
     if (image.startsWith("/uploads/")) {
-      return `http://localhost:5000${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com${image}`;
     }
 
     if (image.startsWith("uploads/")) {
-      return `http://localhost:5000/${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com/${image}`;
     }
 
-    return `http://localhost:5000/uploads/${image.replace(/^\/+/, "")}`;
+    return `http://https://smart-cafe-mern-stack.onrender.com/uploads/${image.replace(/^\/+/, "")}`;
   };
 
   const [order, setOrder] = useState(null);
@@ -46,7 +46,7 @@ function OrderSuccess() {
           const storedPhone = localStorage.getItem("deliveryPhone") || "";
           const storedEmail = localStorage.getItem("deliveryEmail") || "";
 
-          await fetch("http://localhost:5000/api/orders/stripe", {
+          await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/orders/stripe", {
             method: "POST",
             headers: { 
               "Content-Type": "application/json",
@@ -67,7 +67,7 @@ function OrderSuccess() {
         }
 
         // Fetch user's latest order
-        const res = await fetch("http://localhost:5000/api/orders/my", {
+        const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/orders/my", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -91,7 +91,7 @@ function OrderSuccess() {
     if (!reviewProduct) return;
     
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${reviewProduct._id}/reviews`, {
+      const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/products/${reviewProduct._id}/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

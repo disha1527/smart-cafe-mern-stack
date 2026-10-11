@@ -47,13 +47,13 @@ export default function Dashboard() {
       setLoading(true);
       try {
         const [ordersRes, productsRes, bookingsRes] = await Promise.all([
-          fetch("http://localhost:5000/api/admin/orders", {
+          fetch("http://https://smart-cafe-mern-stack.onrender.com/api/admin/orders", {
             headers: { Authorization: `Bearer ${adminToken}` },
           }),
-          fetch("http://localhost:5000/api/admin/products", {
+          fetch("http://https://smart-cafe-mern-stack.onrender.com/api/admin/products", {
             headers: { Authorization: `Bearer ${adminToken}` },
           }),
-          fetch("http://localhost:5000/api/admin/bookings", {
+          fetch("http://https://smart-cafe-mern-stack.onrender.com/api/admin/bookings", {
             headers: { Authorization: `Bearer ${adminToken}` },
           }),
         ]);

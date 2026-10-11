@@ -46,7 +46,7 @@ function Booking() {
   }, [date]);
 
   const fetchBookings = async () => {
-    const res = await fetch("http://localhost:5000/api/bookings", {
+    const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/bookings", {
       headers: { Authorization: `Bearer ${token}` }
     });
     const data = await res.json();
@@ -63,7 +63,7 @@ function Booking() {
     const fetchBookedSlots = async () => {
       if (date && tableLocation) {
         try {
-          const res = await fetch(`http://localhost:5000/api/bookings/booked-slots?date=${date}&tableLocation=${tableLocation}`, {
+          const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/bookings/booked-slots?date=${date}&tableLocation=${tableLocation}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           const data = await res.json();
@@ -81,7 +81,7 @@ function Booking() {
   }, [date, tableLocation, token]);
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io("http://https://smart-cafe-mern-stack.onrender.com");
 
     socket.on("booking_created", (newBooking) => {
       if (
@@ -104,7 +104,7 @@ function Booking() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -142,7 +142,7 @@ function Booking() {
     if (!confirmCancel) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/bookings/cancel/${id}`, {
+      const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/bookings/cancel/${id}`, {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` }
       });

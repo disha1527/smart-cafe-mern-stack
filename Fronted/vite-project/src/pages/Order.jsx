@@ -7,7 +7,7 @@
 
 //   useEffect(() => {
 //     const fetchProduct = async () => {
-//       const res = await fetch(`http://localhost:5000/api/products/${id}`);
+//       const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/products/${id}`);
 //       const data = await res.json();
 //       setProduct(data);
 //     };
@@ -22,7 +22,7 @@
 //       <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         
 //         <img
-//           src={`http://localhost:5000/${product.image}`}
+//           src={`http://https://smart-cafe-mern-stack.onrender.com/${product.image}`}
 //           alt={product.name}
 //           className="w-full h-64 object-cover rounded-lg"
 //         />
@@ -60,14 +60,14 @@ function Order() {
     if (image.startsWith("http")) return image;
 
     if (image.startsWith("/uploads/")) {
-      return `http://localhost:5000${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com${image}`;
     }
 
     if (image.startsWith("uploads/")) {
-      return `http://localhost:5000/${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com/${image}`;
     }
 
-    return `http://localhost:5000/uploads/${image.replace(/^\/+/, "")}`;
+    return `http://https://smart-cafe-mern-stack.onrender.com/uploads/${image.replace(/^\/+/, "")}`;
   };
 
   const { id } = useParams();
@@ -80,7 +80,7 @@ function Order() {
 
     const fetchProduct = async () => {
 
-      const res = await fetch(`http://localhost:5000/api/products/${id}`);
+      const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/products/${id}`);
       const data = await res.json();
 
       setProduct(data);
@@ -209,7 +209,7 @@ function Order() {
           if (!token) return alert("Please login to review!");
 
           try {
-            const res = await fetch(`http://localhost:5000/api/products/${id}/reviews`, {
+            const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/products/${id}/reviews`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

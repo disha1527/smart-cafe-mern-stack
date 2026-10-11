@@ -19,14 +19,14 @@ function Cart() {
     if (image.startsWith("http")) return image;
 
     if (image.startsWith("/uploads/")) {
-      return `http://localhost:5000${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com${image}`;
     }
 
     if (image.startsWith("uploads/")) {
-      return `http://localhost:5000/${image}`;
+      return `http://https://smart-cafe-mern-stack.onrender.com/${image}`;
     }
 
-    return `http://localhost:5000/uploads/${image.replace(/^\/+/, "")}`;
+    return `http://https://smart-cafe-mern-stack.onrender.com/uploads/${image.replace(/^\/+/, "")}`;
   };
 
   const [cart, setCart] = useState([]);
@@ -37,7 +37,7 @@ function Cart() {
 
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:5000/api/cart", {
+    const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/cart", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -69,7 +69,7 @@ function Cart() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/api/cart/${productId}`,
+      `http://https://smart-cafe-mern-stack.onrender.com/api/cart/${productId}`,
       {
         method: "DELETE",
         headers: {

@@ -23,7 +23,7 @@ function AdminProducts() {
 
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/admin/products", {
+        const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/admin/products", {
           headers: { Authorization: `Bearer ${adminToken}` },
         });
 
@@ -50,7 +50,7 @@ function AdminProducts() {
     if (!window.confirm("Delete this product?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/admin/products/delete/${id}`, {
+      await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/admin/products/delete/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${adminToken}` },
       });
@@ -81,7 +81,7 @@ function AdminProducts() {
                 src={
                   item.image?.startsWith("http")
                     ? item.image
-                    : `http://localhost:5000${item.image}`
+                    : `http://https://smart-cafe-mern-stack.onrender.com${item.image}`
                 }
                 alt={item.name}
                 className="w-full h-48 object-cover"

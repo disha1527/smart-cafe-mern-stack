@@ -20,7 +20,7 @@ export default function AdminOrders() {
   const fetchOrders = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/admin/orders', {
+      const res = await fetch('http://https://smart-cafe-mern-stack.onrender.com/api/admin/orders', {
         headers: { Authorization: `Bearer ${adminToken}` }
       });
       const data = await res.json();
@@ -41,7 +41,7 @@ export default function AdminOrders() {
   const togglePaymentStatus = async (orderId, currentPaid) => {
     setUpdatingOrder(orderId);
     try {
-      const res = await fetch(`http://localhost:5000/api/admin/orders/update/${orderId}`, {
+      const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/admin/orders/update/${orderId}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${adminToken}`,
@@ -61,7 +61,7 @@ export default function AdminOrders() {
     if (!window.confirm('Delete this order permanently?')) return;
     setDeletingOrder(orderId);
     try {
-      const res = await fetch(`http://localhost:5000/api/admin/orders/${orderId}`, {
+      const res = await fetch(`http://https://smart-cafe-mern-stack.onrender.com/api/admin/orders/${orderId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${adminToken}` },
       });
