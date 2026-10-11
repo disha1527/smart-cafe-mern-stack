@@ -21,7 +21,7 @@ function Menu() {
           return;
         }
 
-        const response = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/products", {
+        const response = await fetch("https://smart-cafe-mern-stack.onrender.com/api/products", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +48,7 @@ function Menu() {
   const addToCart = async (productId) => {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/cart", {
+    const res = await fetch("https://smart-cafe-mern-stack.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -133,7 +133,7 @@ function Menu() {
                   src={
                     item.image?.startsWith("http")
                       ? item.image
-                      : `http://https://"https://smart-cafe-mern-stack.onrender.com"${item.image}`
+                      : `https://smart-cafe-mern-stack.onrender.com${item.image}`
                   }
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
@@ -226,7 +226,7 @@ function Menu() {
               {/* Force a consistent square/4:3 aspect ratio so all images look the same size */}
               <div className="w-full aspect-[4/3] bg-[#F5ECE3] relative">
                 <img 
-                  src={selectedProduct.image?.startsWith("http") ? selectedProduct.image : `http://https://"https://smart-cafe-mern-stack.onrender.com"${selectedProduct.image}`} 
+                  src={selectedProduct.image?.startsWith("http") ? selectedProduct.image : `https://smart-cafe-mern-stack.onrender.com${selectedProduct.image}`} 
                   alt={selectedProduct.name} 
                   className="w-full h-full object-cover"
                 />

@@ -19,7 +19,7 @@ function Checkout() {
   // Prevent users from checking out with an empty cart
   useEffect(() => {
     const checkCart = async () => {
-      const res = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/cart", {
+      const res = await fetch("https://smart-cafe-mern-stack.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -35,7 +35,7 @@ function Checkout() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/user/profile", {
+        const res = await fetch("https://smart-cafe-mern-stack.onrender.com/api/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -52,7 +52,7 @@ function Checkout() {
   }, [token]);
 
   const handleCOD = async () => {
-    const res = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/orders/cod", {
+    const res = await fetch("https://smart-cafe-mern-stack.onrender.com/api/orders/cod", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function Checkout() {
     localStorage.setItem("deliveryEmail", email);
 
     const res = await fetch(
-      "http://https://"https://smart-cafe-mern-stack.onrender.com"/api/payment/online",
+      "https://smart-cafe-mern-stack.onrender.com/api/payment/online",
       {
         method: "POST",
         headers: {

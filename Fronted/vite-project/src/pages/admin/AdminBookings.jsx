@@ -15,7 +15,7 @@ const AdminBookings = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        "http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/bookings",
+        "https://smart-cafe-mern-stack.onrender.com/api/admin/bookings",
         {
           headers: { Authorization: `Bearer ${adminToken}` },
         }
@@ -36,7 +36,7 @@ const AdminBookings = () => {
     if (!window.confirm("Delete this booking?")) return;
 
     await axios.delete(
-      `http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/bookings/delete/${id}`,
+      `https://smart-cafe-mern-stack.onrender.com/api/admin/bookings/delete/${id}`,
       {
         headers: { Authorization: `Bearer ${adminToken}` },
       }
@@ -50,7 +50,7 @@ const AdminBookings = () => {
       currentStatus === "Pending" ? "Confirmed" : "Pending";
 
     await axios.put(
-      `http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/bookings/update/${id}`,
+      `https://smart-cafe-mern-stack.onrender.com/api/admin/bookings/update/${id}`,
       { status: newStatus },
       {
         headers: { Authorization: `Bearer ${adminToken}` },

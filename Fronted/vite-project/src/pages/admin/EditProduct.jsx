@@ -29,7 +29,7 @@ const EditProduct = () => {
     const fetchProduct = async () => {
       try {
         const res = await fetch(
-          `http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/products/${id}`,
+          `https://smart-cafe-mern-stack.onrender.com/api/admin/products/${id}`,
           {
             headers: {
               Authorization: `Bearer ${adminToken}`,
@@ -57,7 +57,7 @@ const EditProduct = () => {
           if (product.image.startsWith("http")) {
             setImagePreview(product.image);
           } else {
-            setImagePreview(`http://https://"https://smart-cafe-mern-stack.onrender.com"${product.image}`);
+            setImagePreview(`https://smart-cafe-mern-stack.onrender.com${product.image}`);
           }
         }
 
@@ -114,7 +114,7 @@ const EditProduct = () => {
       }
 
       const res = await fetch(
-        `http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/products/update/${id}`,
+        `https://smart-cafe-mern-stack.onrender.com/api/admin/products/update/${id}`,
         {
           method: "PUT",
           headers: {

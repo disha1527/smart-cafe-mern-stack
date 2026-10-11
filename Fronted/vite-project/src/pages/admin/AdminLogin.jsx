@@ -52,7 +52,7 @@ function AdminLogin() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/login", {
+      const response = await fetch("https://smart-cafe-mern-stack.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

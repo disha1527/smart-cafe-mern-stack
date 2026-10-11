@@ -68,7 +68,7 @@ const AddProduct = () => {
       payload.append("countInStock", form.countInStock);
       payload.append("imageFile", selectedImageFile);
 
-      const response = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/products/add", {
+      const response = await fetch("https://smart-cafe-mern-stack.onrender.com/api/admin/products/add", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${adminToken}`, // 🔥 important

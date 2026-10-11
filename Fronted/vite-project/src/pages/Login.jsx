@@ -51,7 +51,7 @@ function Login() {
     }
 
     const response = await fetch(
-      "http://https://"https://smart-cafe-mern-stack.onrender.com"/api/auth/login",
+      "https://smart-cafe-mern-stack.onrender.com/api/auth/login",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
