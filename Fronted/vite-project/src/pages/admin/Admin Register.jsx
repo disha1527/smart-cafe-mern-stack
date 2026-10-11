@@ -50,7 +50,7 @@ function AdminRegister() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://https://smart-cafe-mern-stack.onrender.com/api/admin/register", {
+      const res = await fetch("http://https://"https://smart-cafe-mern-stack.onrender.com"/api/admin/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

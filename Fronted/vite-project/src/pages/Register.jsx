@@ -53,7 +53,7 @@ function Register() {
     }
 
     const response = await fetch(
-      "http://https://smart-cafe-mern-stack.onrender.com/api/auth/register",
+      "http://https://"https://smart-cafe-mern-stack.onrender.com"/api/auth/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
